@@ -1,3 +1,7 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>つむぎの案内所</title>
 <meta name="description" content="つむぎ｜AI×恋愛コンテンツで稼ぐ。公式LINEの無料特典、自己紹介、音声配信、メンバーシップのご案内。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -5,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
 <style>
 :root{
-  --paper:#fbf7f2; --paper-2:#f3e8df; --ink:#29242a; --muted:#71686d;
+  --paper:#fbf7f2; --paper-2:#f3e8df; --ink:#29242a; --muted:#5f575c;
   --rose:#b86f72; --rose-dark:#8e4f56; --line:#e6d6ce; --white:#fffdfb;
   --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
   --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
@@ -22,7 +26,8 @@ a:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
 .cover>*{position:relative;z-index:1}
 .cover-left{display:flex;flex-direction:column;align-items:flex-start;gap:28px;min-width:0;padding:20px 0}
 .signature{font-family:var(--latin);font-size:18px;letter-spacing:.12em;color:var(--rose-dark);font-style:italic}
-.lead{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);font-weight:700;line-height:1.55;margin:0;letter-spacing:.04em}
+.lead{font-family:var(--serif);font-size:clamp(24px,3.2vw,42px);font-weight:700;line-height:1.55;margin:0;letter-spacing:.04em}
+.lead span{display:block;white-space:nowrap}
 .lead em{font-style:normal;color:var(--rose-dark);background:linear-gradient(transparent 68%,#efd4ce 68%)}
 .byline{font-size:16px;color:var(--muted);margin:0;line-height:1.95}
 .byline b{display:block;color:var(--ink);font-weight:700;font-size:16px;margin-bottom:4px}
@@ -84,6 +89,7 @@ footer{margin-top:84px;padding:28px 0;text-align:center;font-family:var(--latin)
  .cover{grid-template-columns:1fr;gap:24px;padding:28px 22px 46px;min-height:0}
  .cover:before{top:42%;width:76%;height:58%;border-radius:0 0 0 90px}
  .cover-left{gap:22px;padding:10px 0 0}
+ .lead{font-size:min(30px,6.6vw)}
  .hero-visual{width:min(100%,480px);margin:0 auto;padding:0 12px 20px 0}
  .hero-photo{aspect-ratio:5/4;object-position:center 28%;border-radius:48% 48% 12px 12px}
  .hero-label{right:0;bottom:30px;padding:12px 16px}
@@ -96,8 +102,12 @@ footer{margin-top:84px;padding:28px 0;text-align:center;font-family:var(--latin)
  .plan{padding:22px}
 }
 @media(max-width:420px){
- body{font-size:17px}
- .lead{font-size:31px}
+ body{font-size:16px}
+ .lead{font-size:min(28px,6.6vw);letter-spacing:.02em;line-height:1.6}
+ .byline{font-size:15px}
+ section>p{font-size:16px;line-height:1.95}
+ .gift-list b{font-size:16px}
+ .gift-list i{font-size:14px}
  .row{grid-template-columns:4.5em 1fr auto;gap:10px;padding:18px 2px}
  .row b{font-size:16px}
  .row span.s{font-size:14px}
@@ -108,7 +118,7 @@ footer{margin-top:84px;padding:28px 0;text-align:center;font-family:var(--latin)
 <header class="cover">
   <div class="cover-left">
     <div class="signature">Tsumugi — AI &amp; Love Contents</div>
-    <p class="lead">センスや根性に頼らず、<br><em>仕組みとAI</em>で、<br>最小限の労力から、<br>最大の成果を紡いでいく。</p>
+    <p class="lead"><span>センスや根性に頼らず、</span><span><em>仕組みとAI</em>で、</span><span>最小限の労力から、</span><span>最大の成果を紡いでいく。</span></p>
     <p class="byline"><b>つむぎ｜AI×恋愛コンテンツで稼ぐ</b>経営戦略コンサル出身。AI×恋愛コンテンツの制作とマネタイズを、現場の裏側ごとお伝えしています。</p>
     <ul class="toc">
       <li><a href="#gift">無料特典</a></li>
@@ -200,3 +210,4 @@ footer{margin-top:84px;padding:28px 0;text-align:center;font-family:var(--latin)
 
   <footer>— Tsumugi —</footer>
 </main>
+</html>
