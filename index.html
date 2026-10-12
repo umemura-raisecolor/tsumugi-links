@@ -1,0 +1,202 @@
+<title>つむぎの案内所</title>
+<meta name="description" content="つむぎ｜AI×恋愛コンテンツで稼ぐ。公式LINEの無料特典、自己紹介、音声配信、メンバーシップのご案内。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<style>
+:root{
+  --paper:#fbf7f2; --paper-2:#f3e8df; --ink:#29242a; --muted:#71686d;
+  --rose:#b86f72; --rose-dark:#8e4f56; --line:#e6d6ce; --white:#fffdfb;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --latin:"Cormorant Garamond","Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.95;letter-spacing:.015em}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+.cover{max-width:1240px;margin:0 auto;padding:34px 34px 72px;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,6vw,84px);align-items:center;min-height:660px;position:relative;overflow:hidden}
+.cover:before{content:"";position:absolute;right:0;top:0;width:47%;height:100%;background:var(--paper-2);z-index:0;border-radius:0 0 0 160px}
+.cover>*{position:relative;z-index:1}
+.cover-left{display:flex;flex-direction:column;align-items:flex-start;gap:28px;min-width:0;padding:20px 0}
+.signature{font-family:var(--latin);font-size:18px;letter-spacing:.12em;color:var(--rose-dark);font-style:italic}
+.lead{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);font-weight:700;line-height:1.55;margin:0;letter-spacing:.04em}
+.lead em{font-style:normal;color:var(--rose-dark);background:linear-gradient(transparent 68%,#efd4ce 68%)}
+.byline{font-size:16px;color:var(--muted);margin:0;line-height:1.95}
+.byline b{display:block;color:var(--ink);font-weight:700;font-size:16px;margin-bottom:4px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.toc a{display:block;text-decoration:none;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:15px;color:var(--muted);transition:.2s}
+.toc a:hover{background:var(--rose-dark);color:white;border-color:var(--rose-dark)}
+.hero-visual{min-width:0;position:relative;padding:18px 20px 18px 0}
+.hero-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 28%;border-radius:48% 48% 12px 12px;box-shadow:0 22px 55px rgba(72,44,45,.13)}
+.hero-label{position:absolute;right:-4px;bottom:34px;background:var(--white);padding:16px 22px;box-shadow:0 10px 30px rgba(72,44,45,.1);border-left:3px solid var(--rose)}
+.hero-label span{display:block;font-family:var(--latin);font-style:italic;font-size:13px;letter-spacing:.12em;color:var(--rose-dark)}
+.hero-label b{display:block;font-family:var(--serif);font-size:17px;margin-top:2px}
+section{padding:76px 0 0;display:flex;flex-direction:column;gap:22px;scroll-margin-top:24px}
+.kicker{display:flex;align-items:center;gap:14px;font-family:var(--latin);font-style:italic;color:var(--rose-dark);font-size:18px;letter-spacing:.12em}
+.kicker:after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font-family:var(--serif);font-size:clamp(27px,3.2vw,38px);line-height:1.55;margin:0;letter-spacing:.035em}
+section>p{margin:0;color:var(--muted);max-width:760px;font-size:18px;line-height:2}
+.gift{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4vw,42px);display:flex;flex-direction:column;gap:22px;box-shadow:0 12px 35px rgba(83,53,53,.045)}
+.gift-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:15px}
+.gift-head p{margin:0;font-family:var(--serif);font-weight:700;font-size:21px}
+.gift-head span{font-family:var(--latin);font-style:italic;font-size:16px;color:var(--rose-dark)}
+.gift-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.gift-list li{display:grid;grid-template-columns:42px 1fr;gap:10px;padding:17px 0;border-bottom:1px solid #eee4de;min-width:0}
+.gift-list .no{font-family:var(--latin);font-size:25px;line-height:1.3;color:var(--rose)}
+.gift-list b{display:block;font-weight:700;font-size:17px;line-height:1.75}
+.gift-list i{display:block;font-style:normal;font-size:15px;color:var(--muted);line-height:1.8;margin-top:5px}
+.btn{display:flex;justify-content:center;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:.04em;padding:16px 22px;font-size:17px;text-align:center;border-radius:8px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:#06c755;color:white;box-shadow:0 8px 18px rgba(6,199,85,.16)}
+.btn-main .dot{width:9px;height:9px;border-radius:50%;background:white;flex:none}
+.small{font-size:14px;color:var(--muted);text-align:center;margin:0}
+.btn-out{border:1px solid var(--rose);color:var(--rose-dark);background:transparent}
+.btn-out:hover{background:#f8e9e5}
+.about{display:grid;grid-template-columns:minmax(180px,.7fr) 1.3fr;gap:34px;align-items:start}
+.about-photo{display:none}
+.about .vq{font-family:var(--serif);font-size:clamp(24px,3vw,34px);font-weight:700;color:var(--rose-dark);line-height:1.65;border-left:3px solid var(--rose);padding-left:20px;margin:0}
+.about div{min-width:0;display:flex;flex-direction:column;gap:16px}
+.about p{margin:0;color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.facts li{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--rose-dark);background:var(--white)}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:7em 1fr auto;gap:18px;align-items:center;text-decoration:none;padding:22px 12px;border-bottom:1px solid var(--line);transition:background .2s,padding .2s}
+.row:hover{background:var(--white);padding-inline:20px}
+.row .tag{font-family:var(--latin);font-style:italic;color:var(--rose-dark);font-size:17px;letter-spacing:.06em}
+.row div{min-width:0}
+.row b{display:block;font-weight:700;font-size:16px}
+.row span.s{display:block;font-size:16px;color:var(--muted);line-height:1.85}
+.row .arrow{font-family:var(--latin);color:var(--rose-dark);font-size:24px;transition:transform .2s}
+.row:hover .arrow{transform:translateX(4px)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.plan{padding:26px 22px 24px;display:flex;flex-direction:column;gap:10px;min-width:0;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+.plan:first-child{background:#f4e4df;border-color:#e4c8c1}
+.plan .badge{font-size:11px;letter-spacing:.12em;color:white;background:var(--rose-dark);align-self:flex-start;padding:3px 9px;border-radius:3px}
+.plan .name{font-size:17px;font-weight:700;line-height:1.7}
+.plan .price{font-family:var(--latin);font-size:38px;line-height:1.1;color:var(--rose-dark);font-variant-numeric:lining-nums tabular-nums}
+.plan .price small{font-family:var(--sans);font-size:14px;color:var(--muted);margin-left:3px}
+.plan .what{font-size:15px;color:var(--muted);line-height:1.85}
+footer{margin-top:84px;padding:28px 0;text-align:center;font-family:var(--latin);font-style:italic;color:var(--muted);font-size:16px;letter-spacing:.12em;border-top:1px solid var(--line)}
+@media(max-width:760px){
+ .cover{grid-template-columns:1fr;gap:24px;padding:28px 22px 46px;min-height:0}
+ .cover:before{top:42%;width:76%;height:58%;border-radius:0 0 0 90px}
+ .cover-left{gap:22px;padding:10px 0 0}
+ .hero-visual{width:min(100%,480px);margin:0 auto;padding:0 12px 20px 0}
+ .hero-photo{aspect-ratio:5/4;object-position:center 28%;border-radius:48% 48% 12px 12px}
+ .hero-label{right:0;bottom:30px;padding:12px 16px}
+ .wrap{padding:0 22px}
+ section{padding-top:58px}
+ .gift-list{grid-template-columns:1fr}
+ .about{grid-template-columns:1fr;gap:22px}
+ .about .vq{font-size:25px}
+ .plans{grid-template-columns:1fr}
+ .plan{padding:22px}
+}
+@media(max-width:420px){
+ body{font-size:17px}
+ .lead{font-size:31px}
+ .row{grid-template-columns:4.5em 1fr auto;gap:10px;padding:18px 2px}
+ .row b{font-size:16px}
+ .row span.s{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+
+<header class="cover">
+  <div class="cover-left">
+    <div class="signature">Tsumugi — AI &amp; Love Contents</div>
+    <p class="lead">センスや根性に頼らず、<br><em>仕組みとAI</em>で、<br>最小限の労力から、<br>最大の成果を紡いでいく。</p>
+    <p class="byline"><b>つむぎ｜AI×恋愛コンテンツで稼ぐ</b>経営戦略コンサル出身。AI×恋愛コンテンツの制作とマネタイズを、現場の裏側ごとお伝えしています。</p>
+    <ul class="toc">
+      <li><a href="#gift">無料特典</a></li>
+      <li><a href="#about">自己紹介</a></li>
+      <li><a href="#channels">発信の場所</a></li>
+      <li><a href="#member">メンバーシップ</a></li>
+    </ul>
+  </div>
+  <div class="hero-visual">
+    <img class="hero-photo" src="tsumugi.jpg" alt="つむぎのプロフィール写真">
+    <div class="hero-label"><span>Welcome to my page</span><b>つむぎの案内所</b></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="gift">
+    <div class="kicker">Free Gift</div>
+    <h2>公式LINEで受け取れる、10の特典</h2>
+    <p>はじめての方が迷子にならないように、ロードマップから、そのまま使えるプロンプト、チェックリストまで、私が実際に使っているものをまとめていて、登録するとすぐに受け取れるので、気になるものから試してみましょう。</p>
+    <div class="gift">
+      <div class="gift-head"><p>特典一覧</p><span>10 items, free</span></div>
+      <ol class="gift-list">
+        <li><span class="no">01</span><div><b>収益化完全ロードマップ</b><i>実績ゼロから記事を“資産”に変える5ステップ</i></div></li>
+        <li><span class="no">02</span><div><b>神プロンプト全集</b><i>市場分析からLINEステップまでコピペで完結</i></div></li>
+        <li><span class="no">03</span><div><b>「売れる企画＆目次」出力サンプル3選</b><i>需要分析と目次案のお手本</i></div></li>
+        <li><span class="no">04</span><div><b>はじめてのLINEステップ配信 ミニ講座</b><i>自動で販売までつなげる3日間</i></div></li>
+        <li><span class="no">05</span><div><b>強み発掘×商品化アイデア出しプロンプト集</b><i>勝てる商品テーマを抽出</i></div></li>
+        <li><span class="no">06</span><div><b>強み発掘メーカー 深掘りプロンプト集 V4</b><i>診断結果をnote・SNS・LPに変換</i></div></li>
+        <li><span class="no">07</span><div><b>つむぎの無料コンセプト診断シート</b><i>答えるだけで発信の軸が見つかる</i></div></li>
+        <li><span class="no">08</span><div><b>「売れるBrain企画」プロンプト集</b><i>テーマ・価格・事前チェックまで10工程</i></div></li>
+        <li><span class="no">09</span><div><b>SNS告知文作成プロンプト集</b><i>告知ポストを4パターン自動生成</i></div></li>
+        <li><span class="no">10</span><div><b>実践チェックリスト</b><i>届ける→売る→検証→改善の漏れをなくす</i></div></li>
+      </ol>
+      <a class="btn btn-main" href="https://lin.ee/WQ8Wp9Z" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span>LINEに登録して受け取る</a>
+      <p class="small">登録は無料です。いつでもブロックできます。</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="kicker">About</div>
+    <h2>つむぎについて</h2>
+    <div class="about">
+      <p class="vq">失敗の数だけ、<br>言葉がある。</p>
+      <div>
+        <p>経営戦略コンサル出身で、2度の離婚と、婚活パーティー50回以上の実体験があって、その経験を武器に、AI×恋愛コンテンツで収益化する方法を発信しています。</p>
+        <p>記事って、書いて終わりにしないで、“資産”に変えていくものなので、その仕組みをnoteで公開しているんですよね。まずは自己紹介から読んでみてください。</p>
+        <ul class="facts"><li>経営戦略コンサル出身</li><li>婚活パーティー50回以上</li><li>AI×恋愛コンテンツ</li></ul>
+        <a class="btn btn-out" href="https://x.gd/2CqDP" target="_blank" rel="noopener">自己紹介を読む</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels">
+    <div class="kicker">Channels</div>
+    <h2>発信している場所</h2>
+    <nav class="rows" aria-label="発信している場所">
+      <a class="row" href="https://note.com/tsumugi_relove" target="_blank" rel="noopener">
+        <span class="tag">note</span><div><b>note</b><span class="s">気づきの記録と、読まれるnoteの作り方</span></div><span class="arrow">→</span>
+      </a>
+      <a class="row" href="https://stand.fm/channels/6ab27e64b58540624b1c5aad" target="_blank" rel="noopener">
+        <span class="tag">Radio</span><div><b>stand.fm つむぎちゃんねる</b><span class="s">2日に1回、現場の裏側を声でお届け</span></div><span class="arrow">→</span>
+      </a>
+      <a class="row" href="https://www.youtube.com/channel/UCvcWml6QscVHdtU-3TNKxFg" target="_blank" rel="noopener">
+        <span class="tag">Podcast</span><div><b>YouTube ポッドキャスト</b><span class="s">スタエフの配信を、YouTubeでも</span></div><span class="arrow">→</span>
+      </a>
+      <a class="row" href="https://x.com/tsumugi_relove5" target="_blank" rel="noopener">
+        <span class="tag">X</span><div><b>X（旧Twitter）</b><span class="s">新しい記事や配信のお知らせ</span></div><span class="arrow">→</span>
+      </a>
+      <!-- HP:URLが決まったらコメントを外して差し替え
+      <a class="row" href="https://example.com/" target="_blank" rel="noopener">
+        <span class="tag">Web</span><div><b>ホームページ</b><span class="s">ここに一言説明</span></div><span class="arrow">→</span>
+      </a>
+      -->
+    </nav>
+  </section>
+
+  <section id="member">
+    <div class="kicker">Membership</div>
+    <h2>もっと深く学びたい方へ</h2>
+    <p>まずは月150円のライブラリーから、自分のペースで読み進めていって、その先に、個別に相談したくなったら、コンサルのプランを選びましょう。</p>
+    <div class="plans">
+      <div class="plan"><span class="badge">START</span><div class="name">note収益化ライブラリー</div><div class="price">150<small>円/月</small></div><div class="what">ノウハウ記事が毎月増えて、追加料金なし</div></div>
+      <div class="plan"><div class="name">ライトプラン</div><div class="price">1,980<small>円/月</small></div><div class="what">テキストでのコンサル</div></div>
+      <div class="plan"><div class="name">プレミアムプラン</div><div class="price">9,800<small>円/月</small></div><div class="what">テキストでじっくり伴走</div></div>
+    </div>
+    <a class="btn btn-out" href="https://note.com/tsumugi_relove/membership" target="_blank" rel="noopener">メンバーシップを見る</a>
+  </section>
+
+  <footer>— Tsumugi —</footer>
+</main>
