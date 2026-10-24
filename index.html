@@ -42,11 +42,15 @@ h1,h2,h3{font-family:var(--serif);font-weight:800;margin:0;line-height:1.45;lett
 .toc a{display:block;text-decoration:none;border:1px solid rgba(212,185,138,.5);border-radius:999px;padding:6px 18px;font-size:15px;color:#E8E9EE;transition:background .25s,color .25s}
 .toc a:hover{background:var(--gold-lt);color:var(--ink)}
 .cover{padding:0;min-height:min(92vh,760px);display:flex;align-items:center}
-.cover-bg{position:absolute;top:0;right:0;bottom:0;width:62%;background:url(tsumugi-blazer.jpg) 50% 22%/cover no-repeat;opacity:.38;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 85%,rgba(0,0,0,.6) 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 85%,rgba(0,0,0,.6) 100%);pointer-events:none}
-.cover-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ink) 0%,rgba(27,35,51,0) 30%)}
+.cover-bg{position:absolute;top:0;right:0;bottom:0;width:62%;opacity:.38;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 85%,rgba(0,0,0,.6) 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 85%,rgba(0,0,0,.6) 100%);pointer-events:none}
+.cover-bg .sl{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;opacity:0;transform:scale(1.04);transition:opacity 1.8s ease,transform 7s linear}
+.cover-bg .sl.is-on{opacity:1;transform:scale(1)}
+.cover-bg .s1{background-image:url(tsumugi-blazer.jpg);background-position:50% 22%}
+.cover-bg .s2{background-image:url(tsumugi-laptop.jpg);background-position:38% 30%}
+.cover-bg::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,var(--ink) 0%,rgba(27,35,51,0) 30%)}
 .cover-grid{width:min(1080px,100% - 48px);padding:96px 0 32px}
 .cover-copy{padding-bottom:32px}
-@media (max-width:899px){.cover{min-height:0}.cover-bg{width:100%;opacity:.22;background-position:65% 20%;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}.cover-grid{padding-top:72px}}
+@media (max-width:899px){.cover-bg .s1{background-position:65% 20%}.cover-bg .s2{background-position:42% 30%}.cover{min-height:0}.cover-bg{width:100%;opacity:.22;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}.cover-grid{padding-top:72px}}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @keyframes unveil{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
 .js .sig,.js .lead span,.js .byline,.js .toc{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
@@ -233,7 +237,7 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
 <div class="thread" aria-hidden="true"><i></i><b></b></div>
 
 <header class="cover">
-  <div class="cover-bg" role="img" aria-label="つむぎのプロフィール写真"></div>
+  <div class="cover-bg" role="img" aria-label="つむぎのプロフィール写真"><div class="sl s1 is-on"></div><div class="sl s2"></div></div>
   <div class="wrap cover-grid">
     <div class="cover-copy">
       <div class="sig">つむぎの案内所</div>
@@ -365,6 +369,10 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
 io.unobserve(t)})},{threshold:.2,rootMargin:'0px 0px -40px 0px'});
   targets.forEach(function(t){io.observe(t)});
 })();
+</script>
+<script>
+(function(){var sl=document.querySelectorAll('.cover-bg .sl');if(sl.length<2)return;var n=0;
+setInterval(function(){sl[n].classList.remove('is-on');n=(n+1)%sl.length;sl[n].classList.add('is-on')},6000)})();
 </script>
 </body>
 </html>
