@@ -66,23 +66,33 @@ section{padding:clamp(72px,9vw,120px) 0;scroll-margin-top:0}
 
 /* gift */
 .gift-photo.stack{position:relative;aspect-ratio:4/3;overflow:visible;box-shadow:none;border-radius:0;background:none}
-.bk{position:absolute;width:37%;aspect-ratio:3/4;border-radius:10px 16px 16px 10px;padding:26px 24px 22px 30px;display:flex;flex-direction:column;box-shadow:0 24px 40px rgba(27,35,51,.22);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
-.bk::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:1px;background:currentColor;opacity:.25}
-.bk-n{font-family:var(--serif);font-size:15px;opacity:.7}
-.bk b{font-family:var(--serif);font-size:clamp(15px,1.45vw,19px);line-height:1.5;margin-top:auto}
-.bk i{font-style:normal;font-size:12px;opacity:.75;margin-top:8px;line-height:1.6}
-.bk1{left:31.5%;top:10%;background:var(--ink);color:#fff;z-index:3}
-.bk1 .bk-n{color:var(--gold-lt);opacity:1}
-.bk2{left:31.5%;top:10%;background:var(--sand);color:var(--ink);z-index:2}
-.bk3{left:31.5%;top:10%;background:var(--paper);color:var(--ink);z-index:1;border:1px solid #DCD6CB}
-.gift-photo.stack.on .bk1,.no-js .bk1{transform:rotate(-2deg)}
-.gift-photo.stack.on .bk2{transform:translateX(-78%) rotate(-7deg)}
-.gift-photo.stack.on .bk3{transform:translateX(78%) rotate(6deg)}
+.bk{position:absolute;left:33%;top:4%;width:34%;aspect-ratio:1/1.414;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 22px 28px rgba(27,35,51,.28))}
+/* page block (paper edges peeking out right & bottom) */
+.bk::before{content:"";position:absolute;inset:4px -6px -6px 4px;border-radius:2px 4px 4px 2px;background:repeating-linear-gradient(90deg,#fff 0 1px,#E9E4DA 1px 2px);box-shadow:inset 0 0 0 1px #DDD6C9}
+.bk::after{content:"";position:absolute;inset:2px -3px -3px 2px;border-radius:2px 4px 4px 2px;background:#FBF9F5;box-shadow:inset 0 0 0 1px #E2DCD0}
+.cv{position:absolute;inset:0;z-index:1;border-radius:2px 5px 5px 2px;overflow:hidden;display:flex;flex-direction:column;padding:12% 10% 10% 17%}
+/* spine binding + sheen */
+.cv::before{content:"";position:absolute;left:0;top:0;bottom:0;width:9%;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,.08) 60%,rgba(255,255,255,.12) 70%,rgba(0,0,0,.06));}
+.cv::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 35%,rgba(0,0,0,0) 70%,rgba(0,0,0,.08) 100%);pointer-events:none}
+.frame-in{position:absolute;inset:6% 6% 6% 14%;border:1px solid currentColor;opacity:.28;pointer-events:none}
+.bk-n{font-family:var(--serif);font-size:13px;letter-spacing:.1em;position:relative}
+.bk-rule{display:block;width:28px;height:1px;background:var(--gold);margin:10px 0 0;position:relative}
+.bk b{font-family:var(--serif);font-size:clamp(14px,1.35vw,18px);line-height:1.55;margin-top:auto;position:relative}
+.bk i{font-style:normal;font-size:11px;opacity:.75;margin-top:8px;line-height:1.6;position:relative}
+.bk .by{position:relative;margin-top:14px;font-family:var(--serif);font-size:11px;letter-spacing:.2em;opacity:.7}
+.bk1{z-index:3}.bk1 .cv{background:var(--ink);color:#fff}.bk1 .bk-n{color:var(--gold-lt)}.bk1 .bk-rule{background:var(--gold-lt)}
+.bk2{z-index:2}.bk2 .cv{background:var(--sand);color:var(--ink)}
+.bk3{z-index:1}.bk3 .cv{background:#FFFDF9;color:var(--ink);box-shadow:inset 0 0 0 1px #E2DCD0}
+.bk3 .cv{align-items:flex-end;text-align:right;padding:12% 10% 10% 17%}
+.bk3 .bk-rule{margin-left:auto}
+.gift-photo.stack.on .bk1{transform:rotate(-2deg)}
+.gift-photo.stack.on .bk2{transform:translateX(-80%) translateY(6%) rotate(-8deg)}
+.gift-photo.stack.on .bk3{transform:translateX(80%) translateY(6%) rotate(7deg)}
 .seal{position:absolute;right:6%;bottom:2%;z-index:4;width:112px;height:112px;border-radius:50%;background:linear-gradient(135deg,#B08D57,#D4B98A 50%,#B08D57);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.2;box-shadow:0 14px 30px rgba(176,141,87,.45);transform:scale(0) rotate(-30deg);transition:transform .8s 1s cubic-bezier(.3,1.6,.5,1)}
 .seal b{font-family:var(--serif);font-size:38px;line-height:1}
 .seal span{font-size:12px;text-align:center;margin-top:2px}
 .gift-photo.stack.on .seal{transform:scale(1) rotate(-8deg)}
-@media (prefers-reduced-motion:reduce){.gift-photo.stack .bk2{transform:translateX(-78%) rotate(-7deg)!important}.gift-photo.stack .bk3{transform:translateX(78%) rotate(6deg)!important}.seal{transform:rotate(-8deg)!important}}
+@media (prefers-reduced-motion:reduce){.gift-photo.stack .bk2{transform:translateX(-80%) translateY(6%) rotate(-8deg)!important}.gift-photo.stack .bk3{transform:translateX(80%) translateY(6%) rotate(7deg)!important}.seal{transform:rotate(-8deg)!important}}
 
 .gift-top{display:grid;gap:32px;align-items:center;margin-bottom:clamp(32px,4vw,52px)}
 .gift-top .head{margin-bottom:0}
@@ -255,9 +265,9 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
       <p>はじめての方が迷子にならないように、ロードマップから、そのまま使えるプロンプト、チェックリストまで、私が実際に使っているものをまとめていて、登録するとすぐに受け取れるので、気になるものから試してみましょう。</p>
     </div>
       <figure class="gift-photo stack" aria-hidden="true">
-        <div class="bk bk3"><span class="bk-n">10</span><b>実践<br>チェックリスト</b><i>届ける→売る→検証</i></div>
-        <div class="bk bk2"><span class="bk-n">02</span><b>神プロンプト<br>全集</b><i>コピペで完結</i></div>
-        <div class="bk bk1"><span class="bk-n">01</span><b>収益化完全<br>ロードマップ</b><i>記事を“資産”に変える5ステップ</i></div>
+        <div class="bk bk3"><div class="cv"><span class="frame-in"></span><span class="bk-n">GIFT 10</span><span class="bk-rule"></span><b>実践<br>チェックリスト</b><i>届ける→売る→検証</i><span class="by">つむぎ</span></div></div>
+        <div class="bk bk2"><div class="cv"><span class="frame-in"></span><span class="bk-n">GIFT 02</span><span class="bk-rule"></span><b>神プロンプト<br>全集</b><i>コピペで完結</i><span class="by">つむぎ</span></div></div>
+        <div class="bk bk1"><div class="cv"><span class="frame-in"></span><span class="bk-n">GIFT 01</span><span class="bk-rule"></span><b>収益化完全<br>ロードマップ</b><i>記事を“資産”に変える5ステップ</i><span class="by">つむぎ</span></div></div>
         <div class="seal"><b>10</b><span>の特典<br>無料</span></div>
       </figure>
     </div>
