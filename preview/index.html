@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>つむぎの案内所</title>
+<meta name="description" content="つむぎ｜AI×恋愛コンテンツで稼ぐ。公式LINEの無料特典、自己紹介、音声配信、メンバーシップのご案内。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2333;--ink-2:#2A3448;--sand:#E6DCCB;--mist:#E8E8EC;--blush:#EFE0DA;--paper:#F7F6F3;
+  --gold:#B08D57;--gold-lt:#D4B98A;--text:#2B2E36;--muted:#626775;
+  --serif:'Shippori Mincho B1',serif;--sans:'Zen Kaku Gothic New',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:18px;line-height:2;word-break:auto-phrase;line-break:strict;-webkit-font-smoothing:antialiased}
+@media (min-width:900px){body{font-size:19px}}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1080px,100% - 48px);margin-inline:auto}
+.nw{white-space:nowrap}.ib{display:inline-block}
+h1,h2,h3{font-family:var(--serif);font-weight:800;margin:0;line-height:1.45;letter-spacing:.02em}
+
+/* ---------- cover ---------- */
+.cover{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:56px 0 0}
+.cover::before{content:"";position:absolute;right:-15%;top:-25%;width:75vw;height:75vw;max-width:880px;max-height:880px;border-radius:50%;background:radial-gradient(circle,rgba(176,141,87,.22),rgba(176,141,87,0) 65%);pointer-events:none}
+.cover-grid{display:grid;gap:40px;align-items:end;position:relative}
+@media (min-width:900px){.cover-grid{grid-template-columns:1.15fr .85fr;gap:56px}}
+.cover-copy{padding-bottom:64px}
+.sig{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--gold-lt);margin-bottom:28px}
+.sig::before{content:"";width:36px;height:1px;background:var(--gold-lt)}
+.lead{font-family:var(--serif);font-weight:800;font-size:clamp(26px,3.9vw,50px);line-height:1.55;margin:0}
+.lead span{display:block;white-space:nowrap}
+.lead em{font-style:normal;color:var(--gold-lt)}
+.byline{margin:32px 0 0;color:#C9CDD6;font-size:16px;line-height:1.95;max-width:30em}
+.byline b{display:block;color:#fff;font-family:var(--serif);font-size:19px;margin-bottom:4px}
+.toc{display:flex;flex-wrap:wrap;gap:10px;margin:32px 0 0;padding:0;list-style:none}
+.toc a{display:block;text-decoration:none;border:1px solid rgba(212,185,138,.5);border-radius:999px;padding:6px 18px;font-size:15px;color:#E8E9EE;transition:background .25s,color .25s}
+.toc a:hover{background:var(--gold-lt);color:var(--ink)}
+.photo{position:relative;align-self:stretch;min-height:440px}
+.photo .frame{position:absolute;inset:0;border-radius:220px 220px 0 0;overflow:hidden;background:var(--ink-2)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.photo .ring{position:absolute;inset:-14px -14px 0 -14px;border:1px solid rgba(212,185,138,.5);border-bottom:0;border-radius:234px 234px 0 0;pointer-events:none}
+.photo .card{position:absolute;right:-40px;bottom:20px;background:var(--paper);color:var(--text);padding:14px 22px;border-radius:12px;white-space:nowrap;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.photo .card span{display:block;font-size:13px;color:var(--gold)}
+.photo .card b{display:block;font-family:var(--serif);font-size:20px;line-height:1.5}
+@media (max-width:899px){.photo{min-height:0;aspect-ratio:4/4.3;max-width:420px;width:100%;margin:0 auto}.photo .card{right:12px;bottom:12px}}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes unveil{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+.js .sig,.js .lead span,.js .byline,.js .toc{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.js .lead span:nth-child(1){animation-delay:.1s}.js .lead span:nth-child(2){animation-delay:.22s}.js .lead span:nth-child(3){animation-delay:.34s}.js .lead span:nth-child(4){animation-delay:.46s}
+.js .byline{animation-delay:.65s}.js .toc{animation-delay:.8s}
+.js .photo .frame{animation:unveil 1.4s .2s cubic-bezier(.7,0,.2,1) both}
+.js .photo .card{animation:rise 1s 1.2s cubic-bezier(.2,.7,.2,1) both}
+
+/* ---------- sections ---------- */
+section{padding:clamp(72px,9vw,120px) 0;scroll-margin-top:0}
+.head{margin-bottom:clamp(32px,4vw,52px)}
+.head h2{font-size:clamp(28px,3.4vw,44px)}
+.head p{margin:16px 0 0;color:var(--muted);max-width:40em}
+
+/* gift */
+.gift{background:var(--mist)}
+.glist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+@media (min-width:700px){.glist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.glist li{min-width:0;display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:14px;padding:20px 22px;overflow-wrap:anywhere}
+.glist li:nth-child(4n+1){background:var(--ink);color:#fff}
+.glist li:nth-child(4n+1) i{color:#BFC4CF}
+.glist li:nth-child(4n+3){background:var(--sand)}
+.glist .no{font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--gold)}
+.glist li:nth-child(4n+1) .no{color:var(--gold-lt)}
+.glist b{display:block;font-family:var(--serif);font-size:18px;line-height:1.6}
+.glist i{display:block;font-style:normal;font-size:15px;color:var(--muted);line-height:1.8;margin-top:4px}
+.js .glist li{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.js .glist.on li{opacity:1;transform:none}
+.cta{margin-top:40px;text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:64px;padding:0 40px;border-radius:999px;font-weight:700;text-decoration:none;font-size:18px;transition:transform .25s,box-shadow .25s}
+.btn svg{width:24px;height:24px}
+.btn-gold{position:relative;overflow:hidden;isolation:isolate;color:#fff;background:linear-gradient(135deg,#B08D57,#C9A66B 50%,#B08D57);box-shadow:0 10px 30px rgba(176,141,87,.35)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-gold::after{content:"";position:absolute;top:-20%;left:-75%;width:45%;height:140%;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.15) 30%,rgba(255,255,255,.75) 50%,rgba(255,255,255,.15) 70%,transparent 100%);transform:skewX(-22deg);animation:shine 3.2s ease-in-out infinite;z-index:-1;pointer-events:none}
+@keyframes shine{0%,55%{left:-75%}85%,100%{left:135%}}
+.btn-gold .spark{position:absolute;width:10px;height:10px;pointer-events:none;opacity:0;animation:twinkle 3.2s ease-in-out infinite}
+.btn-gold .spark::before,.btn-gold .spark::after{content:"";position:absolute;left:50%;top:50%;background:#fff;border-radius:2px;transform:translate(-50%,-50%)}
+.btn-gold .spark::before{width:2px;height:10px}.btn-gold .spark::after{width:10px;height:2px}
+.btn-gold .s1{top:10px;right:20%;animation-delay:2.55s}.btn-gold .s2{bottom:10px;right:9%;animation-delay:2.75s}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}6%{opacity:1;transform:scale(1) rotate(45deg)}14%{opacity:0;transform:scale(.3) rotate(90deg)}}
+.cta .note{display:block;margin-top:12px;font-size:14px;color:var(--muted)}
+.btn-line{border:1px solid var(--ink);color:var(--ink);background:transparent;min-height:56px;font-size:17px}
+.btn-line:hover{background:var(--ink);color:#fff}
+
+/* about */
+.about-grid{display:grid;gap:40px}
+@media (min-width:900px){.about-grid{grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}}
+.quote{font-family:var(--serif);font-weight:800;font-size:clamp(34px,4.6vw,60px);line-height:1.5;color:var(--ink);margin:0;position:relative;padding-top:28px}
+.quote::before{content:"";position:absolute;top:0;left:0;width:56px;height:2px;background:var(--gold)}
+.about-body p{margin:0 0 1.5em;max-width:34em}
+.facts{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0 0 32px;padding:0}
+.facts li{background:var(--sand);padding:6px 16px;border-radius:999px;font-size:15px;line-height:1.8}
+
+/* channels */
+.channels{background:var(--sand)}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid #CFC3AE}
+.rows a{display:grid;grid-template-columns:1fr auto;gap:6px 24px;align-items:center;padding:26px 8px;border-bottom:1px solid #CFC3AE;text-decoration:none;transition:background .3s}
+@media (min-width:900px){.rows a{grid-template-columns:170px 1fr 52px;padding:28px 16px}}
+.rows .tag{font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);font-weight:700;color:var(--ink)}
+.rows .what{grid-column:1/-1;order:3}
+@media (min-width:900px){.rows .what{grid-column:auto;order:0}}
+.rows .what b{display:block;font-family:var(--serif);font-size:18px;line-height:1.6;color:var(--ink)}
+.rows .what span{display:block;font-size:16px;color:var(--muted);line-height:1.8}
+.rows .go{width:52px;height:52px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;color:var(--ink);transition:background .3s,color .3s,transform .3s}
+.rows .go svg{width:20px;height:20px}
+.rows a:hover{background:rgba(255,255,255,.45)}
+.rows a:hover .go{background:var(--ink);color:#fff;transform:rotate(-45deg)}
+
+/* member */
+.member{background:var(--ink);color:#fff}
+.member .head h2{color:#fff}
+.member .head p{color:#C9CDD6}
+.plans{display:grid;gap:14px}
+@media (min-width:800px){.plans{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.plan{border:1px solid rgba(212,185,138,.35);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;gap:6px;background:var(--ink-2)}
+.plan.start{background:var(--paper);color:var(--text);border-color:transparent}
+.plan .badge{align-self:flex-start;font-size:13px;color:var(--ink);background:var(--gold-lt);padding:2px 12px;border-radius:999px;margin-bottom:6px}
+.plan .name{font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.6}
+.plan .price{font-family:var(--serif);font-weight:800;font-size:46px;line-height:1.15;color:var(--gold-lt);font-variant-numeric:tabular-nums}
+.plan.start .price{color:var(--gold)}
+.plan .price small{font-family:var(--sans);font-weight:400;font-size:15px;color:#C9CDD6;margin-left:4px}
+.plan.start .price small{color:var(--muted)}
+.plan .what{font-size:15px;color:#C9CDD6;line-height:1.85}
+.plan.start .what{color:var(--muted)}
+.member .cta .btn-line{border-color:var(--gold-lt);color:var(--gold-lt)}
+.member .cta .btn-line:hover{background:var(--gold-lt);color:var(--ink)}
+footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding:28px 24px;font-family:var(--serif);letter-spacing:.2em}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .glist li{opacity:1;transform:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="cover">
+  <div class="wrap cover-grid">
+    <div class="cover-copy">
+      <div class="sig">つむぎの案内所</div>
+      <p class="lead"><span>センスや根性に頼らず、</span><span><em>仕組みとAI</em>で、</span><span>最小限の労力から、</span><span>最大の成果を紡いでいく。</span></p>
+      <p class="byline"><b>つむぎ｜AI×恋愛コンテンツで稼ぐ</b>経営戦略コンサル出身。AI×恋愛コンテンツの制作とマネタイズを、現場の裏側ごとお伝えしています。</p>
+      <ul class="toc">
+        <li><a href="#gift">無料特典</a></li>
+        <li><a href="#about">自己紹介</a></li>
+        <li><a href="#channels">発信の場所</a></li>
+        <li><a href="#member">メンバーシップ</a></li>
+      </ul>
+    </div>
+    <div class="photo">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="frame"><img src="../tsumugi.jpg" alt="つむぎのプロフィール写真"></div>
+      <div class="card"><span>Welcome to my page</span><b>つむぎの案内所</b></div>
+    </div>
+  </div>
+</header>
+
+<section class="gift" id="gift">
+  <div class="wrap">
+    <div class="head">
+      <h2>公式LINEで受け取れる、<br class="sp"><span class="ib">10の特典</span></h2>
+      <p>はじめての方が迷子にならないように、ロードマップから、そのまま使えるプロンプト、チェックリストまで、私が実際に使っているものをまとめていて、登録するとすぐに受け取れるので、気になるものから試してみましょう。</p>
+    </div>
+    <ol class="glist" id="glist">
+      <li><span class="no">01</span><div><b>収益化完全ロードマップ</b><i>実績ゼロから記事を“資産”に変える5ステップ</i></div></li>
+      <li><span class="no">02</span><div><b>神プロンプト全集</b><i>市場分析からLINEステップまでコピペで完結</i></div></li>
+      <li><span class="no">03</span><div><b>「売れる企画＆目次」出力サンプル3選</b><i>需要分析と目次案のお手本</i></div></li>
+      <li><span class="no">04</span><div><b>はじめてのLINEステップ配信 ミニ講座</b><i>自動で販売までつなげる3日間</i></div></li>
+      <li><span class="no">05</span><div><b>強み発掘×商品化アイデア出しプロンプト集</b><i>勝てる商品テーマを抽出</i></div></li>
+      <li><span class="no">06</span><div><b>強み発掘メーカー 深掘りプロンプト集 V4</b><i>診断結果をnote・SNS・LPに変換</i></div></li>
+      <li><span class="no">07</span><div><b>つむぎの無料コンセプト診断シート</b><i>答えるだけで発信の軸が見つかる</i></div></li>
+      <li><span class="no">08</span><div><b>「売れるBrain企画」プロンプト集</b><i>テーマ・価格・事前チェックまで10工程</i></div></li>
+      <li><span class="no">09</span><div><b>SNS告知文作成プロンプト集</b><i>告知ポストを4パターン自動生成</i></div></li>
+      <li><span class="no">10</span><div><b>実践チェックリスト</b><i>届ける→売る→検証→改善の漏れをなくす</i></div></li>
+    </ol>
+    <div class="cta">
+      <a class="btn btn-gold" href="https://lin.ee/WQ8Wp9Z" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 5.9-3.5 8-6C21.4 14.2 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg>
+        LINEに登録して受け取る
+        <span class="spark s1" aria-hidden="true"></span><span class="spark s2" aria-hidden="true"></span>
+      </a>
+      <span class="note">登録無料</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="head" style="margin-bottom:24px"><h2>つむぎについて</h2></div>
+      <p class="quote">失敗の数だけ、<br>言葉がある。</p>
+    </div>
+    <div class="about-body">
+      <ul class="facts"><li>経営戦略コンサル出身</li><li>婚活パーティー50回以上</li><li>AI×恋愛コンテンツ</li></ul>
+      <p>経営戦略コンサル出身で、2度の離婚と、婚活パーティー50回以上の実体験があって、その経験を武器に、AI×恋愛コンテンツで収益化する方法を発信しています。</p>
+      <p>記事って、書いて終わりにしないで、“資産”に変えていくものなので、その仕組みをnoteで公開しているんですよね。まずは自己紹介から読んでみてください。</p>
+      <a class="btn btn-line" href="https://x.gd/2CqDP" target="_blank" rel="noopener">自己紹介を読む</a>
+    </div>
+  </div>
+</section>
+
+<section class="channels" id="channels">
+  <div class="wrap">
+    <div class="head"><h2>発信している場所</h2></div>
+    <ul class="rows">
+      <li><a href="https://note.com/tsumugi_relove" target="_blank" rel="noopener"><span class="tag">note</span><span class="what"><b>note</b><span>気づきの記録と、読まれるnoteの作り方</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="https://stand.fm/channels/6ab27e64b58540624b1c5aad" target="_blank" rel="noopener"><span class="tag">stand.fm</span><span class="what"><b>つむぎちゃんねる</b><span>2日に1回、現場の裏側を声でお届け</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="https://www.youtube.com/channel/UCvcWml6QscVHdtU-3TNKxFg" target="_blank" rel="noopener"><span class="tag">YouTube</span><span class="what"><b>YouTube ポッドキャスト</b><span>スタエフの配信を、YouTubeでも</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="https://x.com/tsumugi_relove5" target="_blank" rel="noopener"><span class="tag">X</span><span class="what"><b>X（旧Twitter）</b><span>新しい記事や配信のお知らせ</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <!-- HP:URLが決まったらコメントを外して差し替え
+      <li><a href="https://example.com/" target="_blank" rel="noopener"><span class="tag">Web</span><span class="what"><b>ホームページ</b><span>ここに一言説明</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      -->
+    </ul>
+  </div>
+</section>
+
+<section class="member" id="member">
+  <div class="wrap">
+    <div class="head">
+      <h2>もっと深く学びたい方へ</h2>
+      <p>まずは月150円のライブラリーから、自分のペースで読み進めていって、その先に、個別に相談したくなったら、コンサルのプランを選びましょう。</p>
+    </div>
+    <div class="plans">
+      <div class="plan start"><span class="badge">はじめての方に</span><div class="name">note収益化ライブラリー</div><div class="price">150<small>円/月</small></div><div class="what">ノウハウ記事が毎月増えて、追加料金なし</div></div>
+      <div class="plan"><div class="name">ライトプラン</div><div class="price">1,980<small>円/月</small></div><div class="what">テキストでのコンサル</div></div>
+      <div class="plan"><div class="name">プレミアムプラン</div><div class="price">9,800<small>円/月</small></div><div class="what">テキストでじっくり伴走</div></div>
+    </div>
+    <div class="cta"><a class="btn btn-line" href="https://note.com/tsumugi_relove/membership" target="_blank" rel="noopener">メンバーシップを見る</a></div>
+  </div>
+</section>
+
+<footer>つむぎ｜Tsumugi</footer>
+
+<script>
+(function(){
+  var g=document.getElementById('glist');
+  g.querySelectorAll('li').forEach(function(li,i){li.style.transitionDelay=(i*0.06)+'s'});
+  if(!('IntersectionObserver' in window)){g.classList.add('on');return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){g.classList.add('on');io.disconnect()}})},{threshold:.15});
+  io.observe(g);
+})();
+</script>
+</body>
+</html>
