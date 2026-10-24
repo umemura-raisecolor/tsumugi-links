@@ -147,6 +147,45 @@ section{padding:clamp(72px,9vw,120px) 0;scroll-margin-top:0}
 .plan.start .what{color:var(--muted)}
 .member .cta .btn-line{border-color:var(--gold-lt);color:var(--gold-lt)}
 .member .cta .btn-line:hover{background:var(--gold-lt);color:var(--ink)}
+
+/* ---------- motion ---------- */
+.thread{position:fixed;left:max(14px,calc((100vw - 1080px)/2 - 48px));top:0;bottom:0;width:2px;z-index:40;pointer-events:none;display:none}
+.thread i{position:absolute;left:0;top:0;width:2px;height:100%;background:linear-gradient(var(--gold),var(--gold-lt));transform-origin:top;transform:scaleY(var(--p,0))}
+.thread b{position:absolute;left:-4px;width:10px;height:10px;border-radius:50%;background:var(--gold);top:calc(var(--p,0) * 100% - 5px);opacity:var(--o,0);transition:opacity .4s}
+@media (min-width:1220px){.thread{display:block}}
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.from-left{transform:translateX(-40px)}
+.js .rv.zoom{transform:scale(.94)}
+.js .rv.on{opacity:1;transform:none}
+.head h2{position:relative;display:inline-block}
+.head h2::after{content:"";display:block;height:2px;width:56px;background:var(--gold);margin-top:16px;transform-origin:left;transition:transform 1s .3s cubic-bezier(.2,.7,.2,1)}
+.js .head h2::after{transform:scaleX(0)}
+.js .head.on h2::after{transform:scaleX(1)}
+.member .head h2::after{background:var(--gold-lt)}
+.js .quote i{display:inline-block;font-style:normal;opacity:0;transform:translateY(.4em);filter:blur(6px);transition:opacity .6s,transform .6s cubic-bezier(.2,.7,.2,1),filter .6s}
+.js .quote.on i{opacity:1;transform:none;filter:none}
+.quote i{font-style:normal}
+.about-wrap{position:relative;max-width:360px;width:100%;margin-inline:auto}
+.about-wrap .about-photo{box-shadow:none;max-width:none}
+.orbit{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);pointer-events:none;animation:spin 30s linear infinite}
+.orbit circle{fill:none;stroke:var(--gold);stroke-width:.5;stroke-dasharray:2 3 14 3;opacity:.8}
+@keyframes spin{to{transform:rotate(360deg)}}
+.gift-photo img{transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.js .gift-photo img{transform:scale(1.15)}
+.js .gift-photo.on img{transform:scale(1)}
+.js .rows li{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rows.on li{opacity:1;transform:none}
+.plan{transition:transform .35s,box-shadow .35s}
+.plan:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.js .plans .plan{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.js .plans.on .plan{opacity:1;transform:none}
+.js .plans.on .plan:hover{transform:translateY(-6px)}
+.toc a{position:relative}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.photo .card{animation-fill-mode:both}
+.js .photo.on .card{animation:rise 1s 1.2s cubic-bezier(.2,.7,.2,1) both,floaty 5s 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .quote i,.js .rows li,.js .plans .plan,.js .gift-photo img{opacity:1!important;transform:none!important;filter:none!important}.js .head h2::after{transform:none}}
+
 footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding:28px 24px;font-family:var(--serif);letter-spacing:.2em}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .glist li{opacity:1;transform:none}}
@@ -154,6 +193,7 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<div class="thread" aria-hidden="true"><i></i><b></b></div>
 
 <header class="cover">
   <div class="wrap cover-grid">
@@ -168,7 +208,7 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
         <li><a href="#member">メンバーシップ</a></li>
       </ul>
     </div>
-    <div class="photo">
+    <div class="photo on">
       <div class="ring" aria-hidden="true"></div>
       <div class="frame"><img src="../tsumugi.jpg" alt="つむぎのプロフィール写真"></div>
       <div class="card"><span>Welcome to my page</span><b>つむぎの案内所</b></div>
@@ -211,9 +251,9 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
 <section id="about">
   <div class="wrap">
     <div class="head" style="margin-bottom:20px"><h2>つむぎについて</h2></div>
-    <p class="quote"><span class="nw">失敗の数だけ、</span><span class="nw">言葉がある。</span></p>
+    <p class="quote" aria-label="失敗の数だけ、言葉がある。"><span class="nw" aria-hidden="true"><i>失</i><i>敗</i><i>の</i><i>数</i><i>だ</i><i>け</i><i>、</i></span><span class="nw" aria-hidden="true"><i>言</i><i>葉</i><i>が</i><i>あ</i><i>る</i><i>。</i></span></p>
     <div class="about-grid">
-      <div class="about-photo"><img src="../tsumugi-chin.jpg" alt="つむぎ" loading="lazy"></div>
+      <div class="about-wrap"><svg class="orbit" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/></svg><div class="about-photo"><img src="../tsumugi-chin.jpg" alt="つむぎ" loading="lazy"></div></div>
       <div class="about-body">
         <ul class="facts"><li>経営戦略コンサル出身</li><li>婚活パーティー50回以上</li><li>AI×恋愛コンテンツ</li></ul>
         <p>経営戦略コンサル出身で、2度の離婚と、婚活パーティー50回以上の実体験があって、その経験を武器に、AI×恋愛コンテンツで収益化する方法を発信しています。</p>
@@ -246,9 +286,9 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
       <p>まずは月150円のライブラリーから、自分のペースで読み進めていって、その先に、個別に相談したくなったら、コンサルのプランを選びましょう。</p>
     </div>
     <div class="plans">
-      <div class="plan start"><span class="badge">はじめての方に</span><div class="name">note収益化ライブラリー</div><div class="price">150<small>円/月</small></div><div class="what">ノウハウ記事が毎月増えて、追加料金なし</div></div>
-      <div class="plan"><div class="name">ライトプラン</div><div class="price">1,980<small>円/月</small></div><div class="what">テキストでのコンサル</div></div>
-      <div class="plan"><div class="name">プレミアムプラン</div><div class="price">9,800<small>円/月</small></div><div class="what">テキストでじっくり伴走</div></div>
+      <div class="plan start"><span class="badge">はじめての方に</span><div class="name">note収益化ライブラリー</div><div class="price"><span class="cnt" data-to="150">150</span><small>円/月</small></div><div class="what">ノウハウ記事が毎月増えて、追加料金なし</div></div>
+      <div class="plan"><div class="name">ライトプラン</div><div class="price"><span class="cnt" data-to="1980">1,980</span><small>円/月</small></div><div class="what">テキストでのコンサル</div></div>
+      <div class="plan"><div class="name">プレミアムプラン</div><div class="price"><span class="cnt" data-to="9800">9,800</span><small>円/月</small></div><div class="what">テキストでじっくり伴走</div></div>
     </div>
     <div class="cta"><a class="btn btn-line" href="https://note.com/tsumugi_relove/membership" target="_blank" rel="noopener">メンバーシップを見る</a></div>
   </div>
@@ -263,6 +303,29 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
   if(!('IntersectionObserver' in window)){g.classList.add('on');return}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){g.classList.add('on');io.disconnect()}})},{threshold:.15});
   io.observe(g);
+})();
+
+(function(){
+  var th=document.querySelector('.thread');
+  function sc(){var y=scrollY,m=document.documentElement.scrollHeight-innerHeight;th.style.setProperty('--p',m>0?Math.min(1,y/m).toFixed(4):0);th.style.setProperty('--o',y>40?1:0)}
+  addEventListener('scroll',sc,{passive:true});sc();
+  // mark reveal targets
+  document.querySelectorAll('section .head').forEach(function(h){h.classList.add('rv')});
+  document.querySelectorAll('.about-body > *').forEach(function(e,i){e.classList.add('rv');e.style.transitionDelay=(i*.12)+'s'});
+  document.querySelectorAll('.about-wrap').forEach(function(e){e.classList.add('rv','zoom')});
+  document.querySelectorAll('.cta').forEach(function(e){e.classList.add('rv')});
+  document.querySelectorAll('.quote i').forEach(function(e,i){e.style.transitionDelay=(i*.07)+'s'});
+  document.querySelectorAll('.rows li').forEach(function(e,i){e.style.transitionDelay=(i*.12)+'s'});
+  document.querySelectorAll('.plans .plan').forEach(function(e,i){e.style.transitionDelay=(i*.15)+'s'});
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function countUp(el){var to=+el.dataset.to,st=null,d=1400;if(reduce){return}
+    function f(t){if(!st)st=t;var k=Math.min(1,(t-st)/d),e=1-Math.pow(1-k,3);el.textContent=Math.round(e*to).toLocaleString('ja-JP');if(k<1)requestAnimationFrame(f)}
+    el.textContent='0';requestAnimationFrame(f)}
+  var targets=document.querySelectorAll('.rv,.quote,.gift-photo,.rows,.plans');
+  if(!('IntersectionObserver' in window)){targets.forEach(function(t){t.classList.add('on')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;t.classList.add('on');
+    if(t.classList.contains('plans'))t.querySelectorAll('.cnt').forEach(countUp);io.unobserve(t)})},{threshold:.2,rootMargin:'0px 0px -40px 0px'});
+  targets.forEach(function(t){io.observe(t)});
 })();
 </script>
 </body>
