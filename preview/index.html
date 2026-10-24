@@ -65,6 +65,12 @@ section{padding:clamp(72px,9vw,120px) 0;scroll-margin-top:0}
 .head p{margin:16px 0 0;color:var(--muted);max-width:40em}
 
 /* gift */
+.gift-top{display:grid;gap:32px;align-items:center;margin-bottom:clamp(32px,4vw,52px)}
+.gift-top .head{margin-bottom:0}
+@media (min-width:860px){.gift-top{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px}}
+.gift-photo{margin:0;border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 20px 40px rgba(27,35,51,.12)}
+.gift-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 35%}
+
 .gift{background:var(--mist)}
 .glist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 @media (min-width:700px){.glist{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -172,9 +178,12 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
 
 <section class="gift" id="gift">
   <div class="wrap">
-    <div class="head">
+    <div class="gift-top">
+      <div class="head">
       <h2>公式LINEで受け取れる、<br class="sp"><span class="ib">10の特典</span></h2>
       <p>はじめての方が迷子にならないように、ロードマップから、そのまま使えるプロンプト、チェックリストまで、私が実際に使っているものをまとめていて、登録するとすぐに受け取れるので、気になるものから試してみましょう。</p>
+    </div>
+      <figure class="gift-photo"><img src="../tsumugi-note.jpg" alt="手帳を開いて微笑むつむぎ" loading="lazy"></figure>
     </div>
     <ol class="glist" id="glist">
       <li><span class="no">01</span><div><b>収益化完全ロードマップ</b><i>実績ゼロから記事を“資産”に変える5ステップ</i></div></li>
