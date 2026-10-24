@@ -118,7 +118,7 @@ section{padding:clamp(72px,9vw,120px) 0;scroll-margin-top:0}
 .channels{background:var(--sand)}
 .rows{list-style:none;margin:0;padding:0;border-top:1px solid #CFC3AE}
 .rows a{display:grid;grid-template-columns:1fr auto;gap:6px 24px;align-items:center;padding:26px 8px;border-bottom:1px solid #CFC3AE;text-decoration:none;transition:background .3s}
-@media (min-width:900px){.rows a{grid-template-columns:170px 1fr 52px;padding:28px 16px}}
+@media (min-width:900px){.rows a{padding:28px 16px}}
 .rows .tag{font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);font-weight:700;color:var(--ink)}
 .rows .what{grid-column:1/-1;order:3}
 @media (min-width:900px){.rows .what{grid-column:auto;order:0}}
@@ -126,6 +126,18 @@ section{padding:clamp(72px,9vw,120px) 0;scroll-margin-top:0}
 .rows .what span{display:block;font-size:16px;color:var(--muted);line-height:1.8}
 .rows .go{width:52px;height:52px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;color:var(--ink);transition:background .3s,color .3s,transform .3s}
 .rows .go svg{width:20px;height:20px}
+.rows .shot{grid-column:1/-1;order:2;display:block;border-radius:12px;overflow:hidden;background:#fff;aspect-ratio:16/9;box-shadow:0 10px 24px rgba(27,35,51,.12)}
+.rows .shot img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.rows a:hover .shot img{transform:scale(1.05)}
+.rows .shot-radio{background:var(--ink);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.rows .shot-radio b{font-family:var(--serif);font-size:20px;color:var(--gold-lt)}
+.rows .shot-radio>span:last-child{font-size:13px;color:#C9CDD6}
+.wave{display:flex;gap:5px;align-items:center;height:34px;margin-bottom:6px}
+.wave i{width:4px;border-radius:2px;background:var(--gold-lt);height:30%;animation:eq 1.1s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:.15s}.wave i:nth-child(3){animation-delay:.3s}.wave i:nth-child(4){animation-delay:.45s}.wave i:nth-child(5){animation-delay:.6s}.wave i:nth-child(6){animation-delay:.75s}.wave i:nth-child(7){animation-delay:.9s}
+@keyframes eq{0%,100%{height:25%}50%{height:100%}}
+.rows .go{order:1}
+@media (min-width:900px){.rows a{grid-template-columns:150px minmax(0,1fr) 280px 52px}.rows .shot{grid-column:auto;order:0}.rows .go{order:0}}
 .rows a:hover{background:rgba(255,255,255,.45)}
 .rows a:hover .go{background:var(--ink);color:#fff;transform:rotate(-45deg)}
 
@@ -268,10 +280,10 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
   <div class="wrap">
     <div class="head"><h2>発信している場所</h2></div>
     <ul class="rows">
-      <li><a href="https://note.com/tsumugi_relove" target="_blank" rel="noopener"><span class="tag">note</span><span class="what"><b>note</b><span>気づきの記録と、読まれるnoteの作り方</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a href="https://stand.fm/channels/6ab27e64b58540624b1c5aad" target="_blank" rel="noopener"><span class="tag">stand.fm</span><span class="what"><b>つむぎちゃんねる</b><span>2日に1回、現場の裏側を声でお届け</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a href="https://www.youtube.com/channel/UCvcWml6QscVHdtU-3TNKxFg" target="_blank" rel="noopener"><span class="tag">YouTube</span><span class="what"><b>YouTube ポッドキャスト</b><span>スタエフの配信を、YouTubeでも</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a href="https://x.com/tsumugi_relove5" target="_blank" rel="noopener"><span class="tag">X</span><span class="what"><b>X（旧Twitter）</b><span>新しい記事や配信のお知らせ</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="https://note.com/tsumugi_relove" target="_blank" rel="noopener"><span class="tag">note</span><span class="what"><b>note</b><span>気づきの記録と、読まれるnoteの作り方</span></span><span class="shot"><img src="../media/note.jpg" alt="noteのページ" loading="lazy"></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="https://stand.fm/channels/6ab27e64b58540624b1c5aad" target="_blank" rel="noopener"><span class="tag">stand.fm</span><span class="what"><b>つむぎちゃんねる</b><span>2日に1回、現場の裏側を声でお届け</span></span><span class="shot shot-radio"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><b>つむぎちゃんねる</b><span>2日に1回 配信中</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="https://www.youtube.com/channel/UCvcWml6QscVHdtU-3TNKxFg" target="_blank" rel="noopener"><span class="tag">YouTube</span><span class="what"><b>YouTube ポッドキャスト</b><span>スタエフの配信を、YouTubeでも</span></span><span class="shot"><img src="../media/youtube.jpg" alt="YouTubeの動画" loading="lazy"></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="https://x.com/tsumugi_relove5" target="_blank" rel="noopener"><span class="tag">X</span><span class="what"><b>X（旧Twitter）</b><span>新しい記事や配信のお知らせ</span></span><span class="shot"><img src="../media/x.jpg" alt="Xのプロフィール" loading="lazy"></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <!-- HP:URLが決まったらコメントを外して差し替え
       <li><a href="https://example.com/" target="_blank" rel="noopener"><span class="tag">Web</span><span class="what"><b>ホームページ</b><span>ここに一言説明</span></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       -->
