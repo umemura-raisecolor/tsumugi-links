@@ -324,7 +324,7 @@ footer{background:#141A27;color:#8E95A5;text-align:center;font-size:14px;padding
   var targets=document.querySelectorAll('.rv,.quote,.gift-photo,.rows,.plans');
   if(!('IntersectionObserver' in window)){targets.forEach(function(t){t.classList.add('on')});return}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var t=e.target;t.classList.add('on');
-    if(t.classList.contains('plans'))t.querySelectorAll('.cnt').forEach(countUp);io.unobserve(t)})},{threshold:.2,rootMargin:'0px 0px -40px 0px'});
+io.unobserve(t)})},{threshold:.2,rootMargin:'0px 0px -40px 0px'});
   targets.forEach(function(t){io.observe(t)});
 })();
 </script>
